@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,74 +6,86 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff9f5;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f4ef;
   color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #f7f3ee;
-  padding: 30px 20px 10px;
-  text-align: center;
-  border-bottom: 2px solid #eee;
 }
 
 .logo {
-  width: 180px;
-  margin-bottom: 15px;
+  display: block;
+  margin: 30px auto 20px;
+  max-width: 200px;
 }
 
 .navbar {
   background-color: #222;
-  padding: 10px 0;
   display: flex;
   justify-content: center;
-  gap: 80px;
-  align-items: flex-start;
+  padding: 10px 0;
+  position: relative;
+  z-index: 100;
 }
 
-.country-group {
+.menu {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
+  gap: 60px;
 }
 
-.country-name {
-  font-size: 1rem;
+.menu-item {
+  position: relative;
+  color: #fff;
   font-weight: bold;
-  margin-bottom: 4px;
-  color: #ffffffaa;
   text-transform: uppercase;
-  letter-spacing: 1px;
   cursor: default;
+  padding: 10px 0;
 }
 
-.country-name:hover {
+.menu-item:hover {
   color: #4CAF50;
 }
 
-.country-links a {
-  color: #ffffff;
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  margin: 8px 0;
+}
+
+.submenu a {
+  color: white;
   text-decoration: none;
   font-size: 0.9rem;
-  margin: 2px 0;
   transition: color 0.3s ease;
 }
 
-.country-links a:hover {
+.submenu a:hover {
   color: #4CAF50;
 }
 
-main.homepage {
+.homepage {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .intro h1 {
+  font-size: 2.5rem;
   color: #c0392b;
-  font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
@@ -80,15 +93,14 @@ main.homepage {
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.2rem;
-  color: #444;
+  line-height: 1.6;
 }
 
 footer {
-  background-color: #f7f3ee;
+  background-color: #222;
+  color: white;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #777;
+  padding: 15px 0;
   margin-top: 50px;
-  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
 }
