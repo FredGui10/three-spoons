@@ -103,3 +103,20 @@ footer {
   margin-top: 50px;
   font-size: 0.9rem;
 }
+
+.intro p {
+  text-align: left;
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.intro p:first-of-type::first-letter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #c0392b;
+  float: left;
+  line-height: 1;
+  padding-right: 8px;
+}
