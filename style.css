@@ -88,6 +88,13 @@ body {
   margin-bottom: 20px;
 }
 
+.intro h2 {
+  font-size: 1.8rem;
+  color: #c0392b;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
 .intro p {
   max-width: 700px;
   margin: 0 auto;
